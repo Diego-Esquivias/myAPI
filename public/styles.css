@@ -1,0 +1,10 @@
+body {
+    background-color: grey;
+    margin: 0;
+}
+
+div {
+    width: 20rem;
+    margin: auto;
+    text-align: center;
+}

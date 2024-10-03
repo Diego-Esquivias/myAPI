@@ -1,52 +1,257 @@
 [
-    { "id": 1, "title": "Iron Man", "releaseYear": 2008 },
-    { "id": 2, "title": "The Incredible Hulk", "releaseYear": 2008 },
-    { "id": 3, "title": "Iron Man 2", "releaseYear": 2010 },
-    { "id": 4, "title": "Thor", "releaseYear": 2011 },
-    { "id": 5, "title": "Captain America: The First Avenger", "releaseYear": 2011 },
-    { "id": 6, "title": "The Avengers", "releaseYear": 2012 },
-    { "id": 7, "title": "Iron Man 3", "releaseYear": 2013 },
-    { "id": 8, "title": "Thor: The Dark World", "releaseYear": 2013 },
-    { "id": 9, "title": "Captain America: The Winter Soldier", "releaseYear": 2014 },
-    { "id": 10, "title": "Guardians of the Galaxy", "releaseYear": 2014 },
-    { "id": 11, "title": "Avengers: Age of Ultron", "releaseYear": 2015 },
-    { "id": 12, "title": "Ant-Man", "releaseYear": 2015 },
-    { "id": 13, "title": "Captain America: Civil War", "releaseYear": 2016 },
-    { "id": 14, "title": "Doctor Strange", "releaseYear": 2016 },
-    { "id": 15, "title": "Guardians of the Galaxy Vol. 2", "releaseYear": 2017 },
-    { "id": 16, "title": "Spider-Man: Homecoming", "releaseYear": 2017 },
-    { "id": 17, "title": "Thor: Ragnarok", "releaseYear": 2017 },
-    { "id": 18, "title": "Black Panther", "releaseYear": 2018 },
-    { "id": 19, "title": "Avengers: Infinity War", "releaseYear": 2018 },
-    { "id": 20, "title": "Ant-Man and The Wasp", "releaseYear": 2018 },
-    { "id": 21, "title": "Captain Marvel", "releaseYear": 2019 },
-    { "id": 22, "title": "Avengers: Endgame", "releaseYear": 2019 },
-    { "id": 23, "title": "Spider-Man: Far From Home", "releaseYear": 2019 },
-    { "id": 24, "title": "Black Widow", "releaseYear": 2021 },
-    { "id": 25, "title": "Shang-Chi and the Legend of the Ten Rings", "releaseYear": 2021 },
-    { "id": 26, "title": "Superman", "releaseYear": 1978 },
-    { "id": 27, "title": "Batman", "releaseYear": 1989 },
-    { "id": 28, "title": "Batman Returns", "releaseYear": 1992 },
-    { "id": 29, "title": "Superman Returns", "releaseYear": 2006 },
-    { "id": 30, "title": "The Dark Knight", "releaseYear": 2008 },
-    { "id": 31, "title": "Watchmen", "releaseYear": 2009 },
-    { "id": 32, "title": "The Dark Knight Rises", "releaseYear": 2012 },
-    { "id": 33, "title": "Man of Steel", "releaseYear": 2013 },
-    { "id": 34, "title": "Batman v Superman: Dawn of Justice", "releaseYear": 2016 },
-    { "id": 35, "title": "Suicide Squad", "releaseYear": 2016 },
-    { "id": 36, "title": "Wonder Woman", "releaseYear": 2017 },
-    { "id": 37, "title": "Justice League", "releaseYear": 2017 },
-    { "id": 38, "title": "Aquaman", "releaseYear": 2018 },
-    { "id": 39, "title": "Shazam!", "releaseYear": 2019 },
-    { "id": 40, "title": "Joker", "releaseYear": 2019 },
-    { "id": 41, "title": "Birds of Prey", "releaseYear": 2020 },
-    { "id": 42, "title": "Wonder Woman 1984", "releaseYear": 2020 },
-    { "id": 43, "title": "Zack Snyder's Justice League", "releaseYear": 2021 },
-    { "id": 44, "title": "The Suicide Squad", "releaseYear": 2021 },
-    { "id": 45, "title": "The Batman", "releaseYear": 2022 },
-    { "id": 46, "title": "Black Adam", "releaseYear": 2022 },
-    { "id": 47, "title": "Shazam! Fury of the Gods", "releaseYear": 2023 },
-    { "id": 48, "title": "The Flash", "releaseYear": 2023 },
-    { "id": 49, "title": "Blue Beetle", "releaseYear": 2023 },
-    { "id": 50, "title": "Aquaman and the Lost Kingdom", "releaseYear": 2023 }
+  {
+    "id": 1,
+    "title": "Iron Man",
+    "releaseYear": 2008
+  },
+  {
+    "id": 2,
+    "title": "The Incredible Hulk",
+    "releaseYear": 2008
+  },
+  {
+    "id": 3,
+    "title": "Iron Man 2",
+    "releaseYear": 2010
+  },
+  {
+    "id": 4,
+    "title": "Thor",
+    "releaseYear": 2011
+  },
+  {
+    "id": 5,
+    "title": "Captain America: The First Avenger",
+    "releaseYear": 2011
+  },
+  {
+    "id": 6,
+    "title": "The Avengers",
+    "releaseYear": 2012
+  },
+  {
+    "id": 7,
+    "title": "Iron Man 3",
+    "releaseYear": 2013
+  },
+  {
+    "id": 8,
+    "title": "Thor: The Dark World",
+    "releaseYear": 2013
+  },
+  {
+    "id": 9,
+    "title": "Captain America: The Winter Soldier",
+    "releaseYear": 2014
+  },
+  {
+    "id": 10,
+    "title": "Guardians of the Galaxy",
+    "releaseYear": 2014
+  },
+  {
+    "id": 11,
+    "title": "Avengers: Age of Ultron",
+    "releaseYear": 2015
+  },
+  {
+    "id": 12,
+    "title": "Ant-Man",
+    "releaseYear": 2015
+  },
+  {
+    "id": 13,
+    "title": "Captain America: Civil War",
+    "releaseYear": 2016
+  },
+  {
+    "id": 14,
+    "title": "Doctor Strange",
+    "releaseYear": 2016
+  },
+  {
+    "id": 15,
+    "title": "Guardians of the Galaxy Vol. 2",
+    "releaseYear": 2017
+  },
+  {
+    "id": 16,
+    "title": "Spider-Man: Homecoming",
+    "releaseYear": 2017
+  },
+  {
+    "id": 17,
+    "title": "Thor: Ragnarok",
+    "releaseYear": 2017
+  },
+  {
+    "id": 18,
+    "title": "Black Panther",
+    "releaseYear": 2018
+  },
+  {
+    "id": 19,
+    "title": "Avengers: Infinity War",
+    "releaseYear": 2018
+  },
+  {
+    "id": 20,
+    "title": "Ant-Man and The Wasp",
+    "releaseYear": 2018
+  },
+  {
+    "id": 21,
+    "title": "Captain Marvel",
+    "releaseYear": 2019
+  },
+  {
+    "id": 22,
+    "title": "Avengers: Endgame",
+    "releaseYear": 2019
+  },
+  {
+    "id": 23,
+    "title": "Spider-Man: Far From Home",
+    "releaseYear": 2019
+  },
+  {
+    "id": 24,
+    "title": "Black Widow",
+    "releaseYear": 2021
+  },
+  {
+    "id": 25,
+    "title": "Shang-Chi and the Legend of the Ten Rings",
+    "releaseYear": 2021
+  },
+  {
+    "id": 26,
+    "title": "Superman",
+    "releaseYear": 1978
+  },
+  {
+    "id": 27,
+    "title": "Batman",
+    "releaseYear": 1989
+  },
+  {
+    "id": 28,
+    "title": "Batman Returns",
+    "releaseYear": 1992
+  },
+  {
+    "id": 29,
+    "title": "Superman Returns",
+    "releaseYear": 2006
+  },
+  {
+    "id": 30,
+    "title": "The Dark Knight",
+    "releaseYear": 2008
+  },
+  {
+    "id": 31,
+    "title": "Watchmen",
+    "releaseYear": 2009
+  },
+  {
+    "id": 32,
+    "title": "The Dark Knight Rises",
+    "releaseYear": 2012
+  },
+  {
+    "id": 33,
+    "title": "Man of Steel",
+    "releaseYear": 2013
+  },
+  {
+    "id": 34,
+    "title": "Batman v Superman: Dawn of Justice",
+    "releaseYear": 2016
+  },
+  {
+    "id": 35,
+    "title": "Suicide Squad",
+    "releaseYear": 2016
+  },
+  {
+    "id": 36,
+    "title": "Wonder Woman",
+    "releaseYear": 2017
+  },
+  {
+    "id": 37,
+    "title": "Justice League",
+    "releaseYear": 2017
+  },
+  {
+    "id": 38,
+    "title": "Aquaman",
+    "releaseYear": 2018
+  },
+  {
+    "id": 39,
+    "title": "Shazam!",
+    "releaseYear": 2019
+  },
+  {
+    "id": 40,
+    "title": "Joker",
+    "releaseYear": 2019
+  },
+  {
+    "id": 41,
+    "title": "Birds of Prey",
+    "releaseYear": 2020
+  },
+  {
+    "id": 42,
+    "title": "Wonder Woman 1984",
+    "releaseYear": 2020
+  },
+  {
+    "id": 43,
+    "title": "Zack Snyder's Justice League",
+    "releaseYear": 2021
+  },
+  {
+    "id": 44,
+    "title": "The Suicide Squad",
+    "releaseYear": 2021
+  },
+  {
+    "id": 45,
+    "title": "The Batman",
+    "releaseYear": 2022
+  },
+  {
+    "id": 46,
+    "title": "Black Adam",
+    "releaseYear": 2022
+  },
+  {
+    "id": 47,
+    "title": "Shazam! Fury of the Gods",
+    "releaseYear": 2023
+  },
+  {
+    "id": 48,
+    "title": "The Flash",
+    "releaseYear": 2023
+  },
+  {
+    "id": 49,
+    "title": "Blue Beetle",
+    "releaseYear": 2023
+  },
+  {
+    "id": 50,
+    "title": "Aquaman and the Lost Kingdom",
+    "releaseYear": 2023
+  },
+  {
+    "id": 51,
+    "title": "lol",
+    "releaseYear": "2001"
+  }
 ]

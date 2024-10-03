@@ -1,10 +1,11 @@
 // Its time for Nodemon, Postman, and Queries/APIs
 const express = require('express')
+const bodyParser = require('body-parser');
 const app = express()
-const {movies, actors} = require('./db/data')
 const path = require('path');
 const fs = require('fs');
 
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
 app.set('view engine', 'html');
 
@@ -14,14 +15,14 @@ app.get('/', (req, res) => {
 })
 
 // How to get into Admin side
-app.get('/api/admin/:password', (req, res) => {
+app.get('/admin/:password', (req, res) => {
     console.log(req.params)
     const {password} = req.params
     if(password === '18xm2p1m0pa1'){
         console.log("success")
         res.sendFile(path.join(__dirname, '/public/admin.html'))
     } else {
-        res.status(401).json({message: 'Access denied'})
+        res.send("error cannot access")
     }
 })
 
@@ -82,23 +83,44 @@ app.get('/api/actors/:actorID', (req, res) => {
     if(!singleActor){
         return res.status(404).send('actor not found/item does not exist')
     } 
-    // else if (req.query.Life == '42') { // type "?Life=42" in the url
-    //     return res.status(202).send("You have found the easter egg")
-    // }
     return res.json(singleActor)
 })
+
+// TODO: Need to have admin in the url to work ------------------------------------------------------------------------------------------
 
 // POST: Add new movie
 app.post('/movies', (req, res) => {
     const movies = getMovies();
+    const {title, releaseYear} = req.body
         const newMovie = {
             id: movies.length + 1, // TODO: edit this to function properly ----------------------------------------------------------------
-            title: req.body.title,
-            releaseYear: req.body.releaseYear
+            title: title,
+            releaseYear: releaseYear
         };
         movies.push(newMovie);
         saveMovies(movies);
         res.redirect('/');
+})
+
+// DELETE: Delete a movie
+app.post('/delete', (req, res) => {
+    let movies = getMovies();
+    movies = movies.filter(movie => movie.id != req.body.id);
+    saveMovies(movies);
+    res.redirect('/');
+})
+
+// PUT: Edit a movie
+app.post('/edit', (req, res) => {
+    const movies = getMovies();
+    const movieIndex = req.body.id;
+    if (req.body.title == '') {
+        movies[movieIndex].releaseYear = req.body.releaseYear;
+    } else if (req.body.releaseYear == '') {
+        movies[movieIndex].title = req.body.title;
+    }
+    saveMovies(movies);
+    res.redirect('/');
 })
 
 app.listen(5000, () => {

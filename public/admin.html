@@ -9,14 +9,42 @@
     <h1>Admin Page</h1>
 
     <div class="form">
-        <form action="/movies" method="POST">
+        <form action="/movies" method="post">
             <fieldset>
-                <legend>Add Car Showcase</legend>
-                <label for="1">Title: </label>
-                <input type="text" id="1" name="title" value="" placeholder="Title" required>
-                <label for="2">Release Year: </label>
-                <input type="number" id="2" name="releaseYear" value="" min="1000" required>
+                <legend>Add New Movie</legend>
+                <label for="title">Title: </label>
+                <input type="text" id="title" name="title" value="" placeholder="Title" required>
+                <label for="releaseYear">Release Year: </label>
+                <input type="number" id="releaseYear" name="releaseYear" value="" min="1000" required>
                 <button type="submit">Add Movie</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="form">
+        <form action="/delete" method="post">
+            <fieldset>
+                <legend>Delete a Movie</legend>
+                <label for="id">Movie ID: </label>
+                <input type="number" id="id" name="id" value="" required>
+                <button type="submit">Delete Movie</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="form">
+        <form action="/edit" method="post">
+            <fieldset>
+                <legend>Edit a Movie</legend>
+                <label for="id">Movie ID: </label>
+                <input type="number" id="id" name="id" value="" required>
+                <hr>
+                <h3>What you want to edit</h3>
+                <label for="title">Title: </label>
+                <input type="text" id="title" name="title" value="" placeholder="Title">
+                <label for="releaseYear">Release Year: </label>
+                <input type="number" id="releaseYear" name="releaseYear" value="" min="1000">
+                <button type="submit">Delete Movie</button>
             </fieldset>
         </form>
     </div>

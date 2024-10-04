@@ -3,8 +3,18 @@ body {
     margin: 0;
 }
 
+h1 {
+    text-align: center;
+}
+
 div {
     width: 20rem;
     margin: auto;
     text-align: center;
+    background-color: rgb(44, 44, 44);
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    border-radius: 25px;
 }

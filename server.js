@@ -88,8 +88,6 @@ app.get('/api/actors/:actorID', (req, res) => {
     return res.json(singleActor)
 })
 
-// TODO: Need to have admin in the url to work ------------------------------------------------------------------------------------------
-
 // POST: Add new movie (Admin Mode)
 app.post('/admin/:password/movies', (req, res) => {
     const { password } = req.params;
@@ -163,7 +161,7 @@ app.post('/admin/:password/actors', (req, res) => {
     res.redirect('/');
 });
 
-// DELETE: Delete a movie
+// DELETE: Delete a movie (Admin Mode)
 app.delete('/admin/:password/delete/movie', (req, res) => {
     const { password } = req.params; // Extract the password from the URL
     const { id } = req.body; // Extract the movie ID from the request body
@@ -191,7 +189,7 @@ app.delete('/admin/:password/delete/movie', (req, res) => {
     res.redirect('/');
 });
 
-// DELETE: Delete an actor
+// DELETE: Delete an actor (Admin Mode)
 app.delete('/admin/:password/delete/actor', (req, res) => {
     const { password } = req.params; // Extract the password from the URL
     const { id } = req.body; // Extract the actor ID from the request body
@@ -219,7 +217,7 @@ app.delete('/admin/:password/delete/actor', (req, res) => {
     res.redirect('/');
 });
 
-// PUT: Edit a movie
+// PUT: Edit a movie (Admin Mode)
 app.put('/admin/:password/edit/movie', (req, res) => {
     const { password } = req.params; // Extract the password from the URL
     const { id, title, releaseYear } = req.body; // Extract the movie ID, title, and release year from the request body
@@ -254,7 +252,7 @@ app.put('/admin/:password/edit/movie', (req, res) => {
 });
 
 
-// PUT: Edit an actor
+// PUT: Edit an actor (Admin Mode)
 app.put('/admin/:password/edit/actor', (req, res) => {
     const { password } = req.params; // Extract the password from the URL
     const { id, name, age, movie_id } = req.body; // Extract the actor ID, name, age, and movie ID from the request body
@@ -291,6 +289,19 @@ app.put('/admin/:password/edit/actor', (req, res) => {
     res.redirect('/');
 });
 
+// POST: Add new movie in the form of the admin page only (Admin Mode)
+app.post('/movies', (req, res) => {
+    const movies = getMovies();
+    const {title, releaseYear} = req.body
+        const newMovie = {
+            id: movies.length + 1, // TODO: edit this to function properly ----------------------------------------------------------------
+            title: title,
+            releaseYear: releaseYear
+        };
+        movies.push(newMovie);
+        saveMovies(movies);
+        res.redirect('/');
+})
 
 
 app.listen(5000, () => {
